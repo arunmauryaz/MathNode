@@ -1,0 +1,33 @@
+{
+  "id": "standard.vector-scale",
+  "name": "Scale Vector",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Scale Vector. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "v",
+      "type": "vector",
+      "default": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "scale",
+      "type": "scalar",
+      "default": 2,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "vector"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.scale(inputs.v,math.numeric(inputs.scale)) })"
+}

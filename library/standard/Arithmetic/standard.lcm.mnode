@@ -1,0 +1,30 @@
+{
+  "id": "standard.lcm",
+  "name": "Least Common Multiple",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Least Common Multiple. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "scalar",
+      "default": 12,
+      "widget": "number"
+    },
+    {
+      "name": "b",
+      "type": "scalar",
+      "default": 18,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: (()=>{const a=math.numeric(inputs.a),b=math.numeric(inputs.b),d=math.collections.gcd(a,b);return d===0?0:math.abs((a/d)*b);})() })"
+}

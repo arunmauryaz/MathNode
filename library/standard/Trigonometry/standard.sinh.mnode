@@ -1,0 +1,24 @@
+{
+  "id": "standard.sinh",
+  "name": "Hyperbolic Sine",
+  "folderId": "standard-1",
+  "category": "Trigonometry",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Hyperbolic Sine. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 0,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.call('Sinh',inputs.x) })"
+}

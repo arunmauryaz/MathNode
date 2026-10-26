@@ -1,0 +1,59 @@
+{
+  "id": "latex-formula-example",
+  "title": "LaTeX Formula",
+  "pan": {
+    "x": 0,
+    "y": 0
+  },
+  "zoom": 0.8,
+  "nodes": [
+    {
+      "id": "formula",
+      "type": "math.value",
+      "title": "Formula",
+      "x": -720,
+      "y": -160,
+      "width": 420,
+      "values": {
+        "value": "\\frac{A^2+B^2+2AB}{\\sqrt{C}}"
+      }
+    },
+    {
+      "id": "bindings",
+      "type": "standard.substitute",
+      "title": "Assign A, B, C",
+      "x": -180,
+      "y": -160,
+      "width": 320,
+      "values": {
+        "bindings": "A=2, B=3, C=4"
+      }
+    },
+    {
+      "id": "output",
+      "type": "math.output",
+      "title": "View Result",
+      "x": 260,
+      "y": -160,
+      "width": 420,
+      "values": {}
+    }
+  ],
+  "connections": [
+    {
+      "id": "formula-bindings",
+      "fromNodeId": "formula",
+      "fromSocket": "value",
+      "toNodeId": "bindings",
+      "toSocket": "expression"
+    },
+    {
+      "id": "bindings-output",
+      "fromNodeId": "bindings",
+      "fromSocket": "result",
+      "toNodeId": "output",
+      "toSocket": "input"
+    }
+  ],
+  "frames": []
+}

@@ -1,0 +1,30 @@
+{
+  "id": "standard.and",
+  "name": "Boolean AND",
+  "folderId": "standard-5",
+  "category": "Logic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Boolean AND. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "bool",
+      "default": true,
+      "widget": "toggle"
+    },
+    {
+      "name": "b",
+      "type": "bool",
+      "default": false,
+      "widget": "toggle"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "bool"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: inputs.a && inputs.b })"
+}

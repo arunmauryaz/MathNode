@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mathnode": {
+      "command": "node",
+      "args": ["D:/MATHNODE/scripts/mcp-server.mjs", "--workspace", "D:/MATHNODE/.mathnode-agent"]
+    }
+  }
+}

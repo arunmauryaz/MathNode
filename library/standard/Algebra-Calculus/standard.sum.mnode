@@ -1,0 +1,43 @@
+{
+  "id": "standard.sum",
+  "name": "Finite Sum",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Finite Sum. Accepts symbolic formulas and LaTeX.",
+  "inputs": [
+    {
+      "name": "expression",
+      "type": "scalar",
+      "default": "n",
+      "widget": "number"
+    },
+    {
+      "name": "variable",
+      "type": "string",
+      "default": "n",
+      "widget": "text",
+      "connectable": false
+    },
+    {
+      "name": "lower",
+      "type": "scalar",
+      "default": 1,
+      "widget": "number"
+    },
+    {
+      "name": "upper",
+      "type": "scalar",
+      "default": 5,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.series(inputs.expression,inputs.variable,inputs.lower,inputs.upper,false) })"
+}

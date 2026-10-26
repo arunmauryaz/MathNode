@@ -1,0 +1,30 @@
+{
+  "id": "standard.root",
+  "name": "Nth Root",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Nth Root. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 27,
+      "widget": "number"
+    },
+    {
+      "name": "degree",
+      "type": "scalar",
+      "default": 3,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: (() => { if(math.numericValue(inputs.degree) === 0) throw Error('Root degree cannot be zero'); return math.call('Root',inputs.x,inputs.degree); })() })"
+}

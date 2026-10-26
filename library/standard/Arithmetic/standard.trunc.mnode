@@ -1,0 +1,24 @@
+{
+  "id": "standard.trunc",
+  "name": "Truncate",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Truncate. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 2.9,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: (math.trunc)(math.numeric(inputs.x)) })"
+}

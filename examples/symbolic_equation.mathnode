@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "id": "symbolic-equation-example",
+  "title": "Symbolic Equation",
+  "pan": {
+    "x": 0,
+    "y": 0
+  },
+  "zoom": 0.8,
+  "nodes": [
+    {
+      "id": "var-a",
+      "type": "math.value",
+      "definitionId": "math.value",
+      "title": "Value A",
+      "x": -650,
+      "y": -300,
+      "width": 280,
+      "values": {
+        "value": "A",
+        "assigned": false,
+        "binding": 2
+      }
+    },
+    {
+      "id": "var-b",
+      "type": "math.value",
+      "definitionId": "math.value",
+      "title": "Value B",
+      "x": -650,
+      "y": 0,
+      "width": 280,
+      "values": {
+        "value": "B",
+        "assigned": false,
+        "binding": 3
+      }
+    },
+    {
+      "id": "sum",
+      "type": "math.operations",
+      "definitionId": "math.operations",
+      "title": "A plus B",
+      "x": -250,
+      "y": -240,
+      "width": 280,
+      "values": {
+        "a": 0,
+        "b": 0,
+        "operation": "Add (+)"
+      }
+    },
+    {
+      "id": "var-c",
+      "type": "math.value",
+      "definitionId": "math.value",
+      "title": "Value C",
+      "x": -250,
+      "y": 70,
+      "width": 280,
+      "values": {
+        "value": "C",
+        "assigned": false,
+        "binding": 5
+      }
+    },
+    {
+      "id": "equality",
+      "type": "math.equation",
+      "definitionId": "math.equation",
+      "title": "Equation",
+      "x": 150,
+      "y": -160,
+      "width": 280,
+      "values": {
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "id": "inspector",
+      "type": "math.output",
+      "definitionId": "math.output",
+      "title": "Equation Result",
+      "x": 550,
+      "y": -160,
+      "width": 280,
+      "values": {
+        "input": 0
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "wire-0",
+      "fromNodeId": "var-a",
+      "fromSocket": "value",
+      "toNodeId": "sum",
+      "toSocket": "a"
+    },
+    {
+      "id": "wire-1",
+      "fromNodeId": "var-b",
+      "fromSocket": "value",
+      "toNodeId": "sum",
+      "toSocket": "b"
+    },
+    {
+      "id": "wire-2",
+      "fromNodeId": "sum",
+      "fromSocket": "result",
+      "toNodeId": "equality",
+      "toSocket": "left"
+    },
+    {
+      "id": "wire-3",
+      "fromNodeId": "var-c",
+      "fromSocket": "value",
+      "toNodeId": "equality",
+      "toSocket": "right"
+    },
+    {
+      "id": "wire-4",
+      "fromNodeId": "equality",
+      "fromSocket": "equation",
+      "toNodeId": "inspector",
+      "toSocket": "input"
+    }
+  ],
+  "frames": []
+}

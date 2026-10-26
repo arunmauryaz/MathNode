@@ -1,0 +1,25 @@
+{
+  "id": "standard.formula",
+  "name": "LaTeX Formula",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Enter a scalar LaTeX expression. Use Substitute (A=2, B=3) to supply values; display and share the original formula.",
+  "inputs": [
+    {
+      "name": "formula",
+      "type": "string",
+      "default": "A^2+B^2+2AB",
+      "widget": "text",
+      "connectable": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.value(inputs.formula) })"
+}

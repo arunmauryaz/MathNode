@@ -1,0 +1,30 @@
+{
+  "id": "standard.log-base",
+  "name": "Logarithm Base",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Logarithm Base. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 8,
+      "widget": "number"
+    },
+    {
+      "name": "base",
+      "type": "scalar",
+      "default": 2,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.operate('/',math.call('Ln',inputs.x),math.call('Ln',inputs.base)) })"
+}

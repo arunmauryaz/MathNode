@@ -1,0 +1,25 @@
+name: Bug report
+description: A calculation or interaction does not work as expected.
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the expression, node types, and connections involved.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or example graph
+      description: Attach a screenshot or a small .mathnode/.mnode example if helpful.
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system

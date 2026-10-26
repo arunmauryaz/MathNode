@@ -1,0 +1,226 @@
+{
+  "id": "user.example.symbolic-whole-square",
+  "name": "Symbolic Whole Square",
+  "category": "My Nodes",
+  "icon": "function",
+  "badge": "CREATED",
+  "description": "Reusable graph with 5 internal nodes",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "scalar",
+      "description": "Output scalar value",
+      "label": "A",
+      "default": "A",
+      "connectable": true,
+      "widget": "number"
+    },
+    {
+      "name": "b",
+      "type": "scalar",
+      "description": "Output scalar value",
+      "label": "B",
+      "default": "B",
+      "connectable": true,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "view_result",
+      "label": "View Result",
+      "type": "scalar"
+    }
+  ],
+  "composite": {
+    "version": 1,
+    "nodes": [
+      {
+        "id": "a",
+        "type": "math.value",
+        "title": "A",
+        "x": 0,
+        "y": 0,
+        "values": {
+          "value": "A"
+        }
+      },
+      {
+        "id": "b",
+        "type": "math.value",
+        "title": "B",
+        "x": 0,
+        "y": 300,
+        "values": {
+          "value": "B"
+        }
+      },
+      {
+        "id": "sum",
+        "type": "standard.add",
+        "title": "A + B",
+        "x": 360,
+        "y": 30,
+        "values": {}
+      },
+      {
+        "id": "square",
+        "type": "standard.square",
+        "title": "Square",
+        "x": 720,
+        "y": 30,
+        "values": {}
+      },
+      {
+        "id": "out",
+        "type": "math.output",
+        "title": "View Result",
+        "x": 1080,
+        "y": 30,
+        "values": {}
+      }
+    ],
+    "connections": [
+      {
+        "id": "wire-0",
+        "fromNodeId": "a",
+        "fromSocket": "value",
+        "toNodeId": "sum",
+        "toSocket": "a"
+      },
+      {
+        "id": "wire-1",
+        "fromNodeId": "b",
+        "fromSocket": "value",
+        "toNodeId": "sum",
+        "toSocket": "b"
+      },
+      {
+        "id": "wire-2",
+        "fromNodeId": "sum",
+        "fromSocket": "result",
+        "toNodeId": "square",
+        "toSocket": "x"
+      },
+      {
+        "id": "wire-3",
+        "fromNodeId": "square",
+        "fromSocket": "result",
+        "toNodeId": "out",
+        "toSocket": "input"
+      }
+    ],
+    "frames": [],
+    "definitions": [
+      {
+        "id": "math.value",
+        "name": "Value",
+        "category": "Basic Math",
+        "badge": "VALUE",
+        "icon": "slider",
+        "description": "Enter a number, named symbol, or LaTeX formula. Connect to operations or substitute numerical values.",
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "value",
+            "type": "scalar",
+            "description": "Output scalar value"
+          }
+        ],
+        "code": "(inputs, math) => {\n  return { value: math.value(inputs.value ?? 10, inputs.assigned ? inputs.binding : undefined) };\n}"
+      },
+      {
+        "id": "standard.add",
+        "name": "Add",
+        "category": "Arithmetic",
+        "badge": "MATH",
+        "icon": "function",
+        "description": "Add. Angles use radians; numeric collection operations require assigned values.",
+        "inputs": [
+          {
+            "name": "a",
+            "type": "scalar",
+            "default": 2,
+            "widget": "number"
+          },
+          {
+            "name": "b",
+            "type": "scalar",
+            "default": 3,
+            "widget": "number"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "result",
+            "type": "scalar"
+          }
+        ],
+        "code": "(inputs, math) => ({ result: math.operate('+',inputs.a,inputs.b) })"
+      },
+      {
+        "id": "standard.square",
+        "name": "Square",
+        "category": "Arithmetic",
+        "badge": "MATH",
+        "icon": "function",
+        "description": "Square. Angles use radians; numeric collection operations require assigned values.",
+        "inputs": [
+          {
+            "name": "x",
+            "type": "scalar",
+            "default": 3,
+            "widget": "number"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "result",
+            "type": "scalar"
+          }
+        ],
+        "code": "(inputs, math) => ({ result: math.operate('^',inputs.x,2) })"
+      },
+      {
+        "id": "math.output",
+        "name": "View Result",
+        "category": "Display & Output",
+        "badge": "RESULT",
+        "icon": "output",
+        "description": "Digital instrument display that inspects and displays live results",
+        "inputs": [
+          {
+            "name": "input",
+            "type": "any",
+            "default": 0,
+            "description": "Incoming data to display"
+          }
+        ],
+        "outputs": [],
+        "code": "(inputs) => {\n  return { output: inputs.input ?? 0 };\n}"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "a",
+        "nodeId": "a",
+        "socket": "value",
+        "mode": "output"
+      },
+      {
+        "name": "b",
+        "nodeId": "b",
+        "socket": "value",
+        "mode": "output"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "view_result",
+        "nodeId": "out",
+        "socket": "output",
+        "mode": "output"
+      }
+    ]
+  }
+}

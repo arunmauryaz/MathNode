@@ -1,0 +1,43 @@
+{
+  "id": "standard.definite-integral",
+  "name": "Definite Integral",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Definite Integral. Accepts symbolic formulas and LaTeX.",
+  "inputs": [
+    {
+      "name": "expression",
+      "type": "scalar",
+      "default": "x^2",
+      "widget": "number"
+    },
+    {
+      "name": "variable",
+      "type": "string",
+      "default": "x",
+      "widget": "text",
+      "connectable": false
+    },
+    {
+      "name": "lower",
+      "type": "scalar",
+      "default": 0,
+      "widget": "number"
+    },
+    {
+      "name": "upper",
+      "type": "scalar",
+      "default": 1,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.integral(inputs.expression,inputs.variable,inputs.lower,inputs.upper) })"
+}

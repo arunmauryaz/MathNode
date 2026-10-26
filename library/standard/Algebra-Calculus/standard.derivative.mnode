@@ -1,0 +1,31 @@
+{
+  "id": "standard.derivative",
+  "name": "Derivative",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Derivative. Accepts symbolic formulas and LaTeX.",
+  "inputs": [
+    {
+      "name": "expression",
+      "type": "scalar",
+      "default": "x^3",
+      "widget": "number"
+    },
+    {
+      "name": "variable",
+      "type": "string",
+      "default": "x",
+      "widget": "text",
+      "connectable": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.derivative(inputs.expression,inputs.variable) })"
+}

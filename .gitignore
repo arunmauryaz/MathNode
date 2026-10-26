@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.codex-work/
+test-results/
+playwright-report/
+
+.mathnode-agent/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.log
+.DS_Store
+Thumbs.db

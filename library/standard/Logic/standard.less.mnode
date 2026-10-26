@@ -1,0 +1,30 @@
+{
+  "id": "standard.less",
+  "name": "Less Than",
+  "folderId": "standard-5",
+  "category": "Logic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Less Than. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "scalar",
+      "default": 2,
+      "widget": "number"
+    },
+    {
+      "name": "b",
+      "type": "scalar",
+      "default": 3,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "bool"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.numeric(inputs.a) < math.numeric(inputs.b) })"
+}

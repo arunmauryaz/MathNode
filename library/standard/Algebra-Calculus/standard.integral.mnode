@@ -1,0 +1,31 @@
+{
+  "id": "standard.integral",
+  "name": "Indefinite Integral",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Symbolic antiderivative where supported; add a constant of integration when writing a general solution.",
+  "inputs": [
+    {
+      "name": "expression",
+      "type": "scalar",
+      "default": "x^2",
+      "widget": "number"
+    },
+    {
+      "name": "variable",
+      "type": "string",
+      "default": "x",
+      "widget": "text",
+      "connectable": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.integral(inputs.expression,inputs.variable) })"
+}

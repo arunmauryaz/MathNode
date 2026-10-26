@@ -1,0 +1,30 @@
+{
+  "id": "standard.vector2",
+  "name": "Vector 2D",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Vector 2D. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 1,
+      "widget": "number"
+    },
+    {
+      "name": "y",
+      "type": "scalar",
+      "default": 2,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "vector"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: [math.numeric(inputs.x),math.numeric(inputs.y)] })"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "standard.substitute",
+  "name": "Substitute",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Substitute. Accepts symbolic formulas and LaTeX.",
+  "inputs": [
+    {
+      "name": "expression",
+      "type": "scalar",
+      "default": "A^2+B^2+2AB",
+      "widget": "number"
+    },
+    {
+      "name": "bindings",
+      "type": "string",
+      "default": "A=2, B=3",
+      "widget": "text",
+      "connectable": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.substitute(inputs.expression,inputs.bindings) })"
+}

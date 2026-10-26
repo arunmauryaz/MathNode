@@ -1,0 +1,25 @@
+{
+  "id": "standard.latex-equation",
+  "name": "LaTeX Equation",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Typeset an equality with LaTeX. Represents a relation; does not automatically solve it.",
+  "inputs": [
+    {
+      "name": "equation",
+      "type": "string",
+      "default": "y=x^2",
+      "widget": "text",
+      "connectable": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "equation"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.latexEquation(inputs.equation) })"
+}

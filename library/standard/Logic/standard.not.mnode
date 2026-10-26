@@ -1,0 +1,24 @@
+{
+  "id": "standard.not",
+  "name": "Boolean NOT",
+  "folderId": "standard-5",
+  "category": "Logic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Boolean NOT. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "value",
+      "type": "bool",
+      "default": true,
+      "widget": "toggle"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "bool"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: !inputs.value })"
+}

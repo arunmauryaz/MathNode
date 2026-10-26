@@ -1,0 +1,26 @@
+{
+  "id": "standard.normalize",
+  "name": "Normalize Vector",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Normalize Vector. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "v",
+      "type": "vector",
+      "default": [
+        3,
+        4
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "vector"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.normalize(inputs.v) })"
+}

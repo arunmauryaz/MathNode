@@ -1,0 +1,30 @@
+{
+  "id": "standard.combinations",
+  "name": "Combinations nCr",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Combinations nCr. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "n",
+      "type": "scalar",
+      "default": 5,
+      "widget": "number"
+    },
+    {
+      "name": "k",
+      "type": "scalar",
+      "default": 2,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.combinatorics(math.numeric(inputs.n),math.numeric(inputs.k),false) })"
+}

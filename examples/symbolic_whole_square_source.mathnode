@@ -1,0 +1,86 @@
+{
+  "id": "symbolic-whole-square-source",
+  "title": "Symbolic Whole Square",
+  "nodes": [
+    {
+      "id": "a",
+      "type": "math.value",
+      "title": "A",
+      "x": -600,
+      "y": -180,
+      "values": {
+        "value": "A"
+      }
+    },
+    {
+      "id": "b",
+      "type": "math.value",
+      "title": "B",
+      "x": -600,
+      "y": 120,
+      "values": {
+        "value": "B"
+      }
+    },
+    {
+      "id": "sum",
+      "type": "standard.add",
+      "title": "A + B",
+      "x": -240,
+      "y": -150,
+      "values": {}
+    },
+    {
+      "id": "square",
+      "type": "standard.square",
+      "title": "Square",
+      "x": 120,
+      "y": -150,
+      "values": {}
+    },
+    {
+      "id": "out",
+      "type": "math.output",
+      "title": "View Result",
+      "x": 480,
+      "y": -150,
+      "values": {}
+    }
+  ],
+  "connections": [
+    {
+      "id": "wire-0",
+      "fromNodeId": "a",
+      "fromSocket": "value",
+      "toNodeId": "sum",
+      "toSocket": "a"
+    },
+    {
+      "id": "wire-1",
+      "fromNodeId": "b",
+      "fromSocket": "value",
+      "toNodeId": "sum",
+      "toSocket": "b"
+    },
+    {
+      "id": "wire-2",
+      "fromNodeId": "sum",
+      "fromSocket": "result",
+      "toNodeId": "square",
+      "toSocket": "x"
+    },
+    {
+      "id": "wire-3",
+      "fromNodeId": "square",
+      "fromSocket": "result",
+      "toNodeId": "out",
+      "toSocket": "input"
+    }
+  ],
+  "frames": [],
+  "zoom": 0.7,
+  "pan": {
+    "x": 0,
+    "y": 0
+  }
+}

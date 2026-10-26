@@ -1,0 +1,36 @@
+{
+  "id": "standard.lerp",
+  "name": "Linear Interpolation",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Linear Interpolation. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "scalar",
+      "default": 0,
+      "widget": "number"
+    },
+    {
+      "name": "b",
+      "type": "scalar",
+      "default": 10,
+      "widget": "number"
+    },
+    {
+      "name": "t",
+      "type": "scalar",
+      "default": 0.25,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.operate('+',inputs.a,math.operate('*',math.operate('-',inputs.b,inputs.a),inputs.t)) })"
+}

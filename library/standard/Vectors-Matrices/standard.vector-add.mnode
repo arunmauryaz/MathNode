@@ -1,0 +1,36 @@
+{
+  "id": "standard.vector-add",
+  "name": "Vector Add",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Vector Add. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "vector",
+      "default": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "b",
+      "type": "vector",
+      "default": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "vector"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.vectorOp(inputs.a,inputs.b,'add') })"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "standard.atan2",
+  "name": "Angle from XY",
+  "folderId": "standard-1",
+  "category": "Trigonometry",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Angle from XY. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "y",
+      "type": "scalar",
+      "default": 0,
+      "widget": "number"
+    },
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 1,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.atan2(math.numeric(inputs.y),math.numeric(inputs.x)) })"
+}

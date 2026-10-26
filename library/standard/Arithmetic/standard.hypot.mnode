@@ -1,0 +1,30 @@
+{
+  "id": "standard.hypot",
+  "name": "Hypotenuse",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Hypotenuse. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "scalar",
+      "default": 3,
+      "widget": "number"
+    },
+    {
+      "name": "b",
+      "type": "scalar",
+      "default": 4,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.call('Sqrt',math.operate('+',math.operate('^',inputs.a,2),math.operate('^',inputs.b,2))) })"
+}

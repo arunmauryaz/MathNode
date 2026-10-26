@@ -1,0 +1,48 @@
+{
+  "id": "standard.matrix-add",
+  "name": "Matrix Add",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Matrix Add. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "matrix",
+      "default": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "widget": "matrix2x2"
+    },
+    {
+      "name": "b",
+      "type": "matrix",
+      "default": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "widget": "matrix2x2"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "matrix"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.matrixAdd(inputs.a,inputs.b) })"
+}

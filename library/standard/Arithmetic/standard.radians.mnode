@@ -1,0 +1,24 @@
+{
+  "id": "standard.radians",
+  "name": "Degrees to Radians",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Degrees to Radians. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 180,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: (x=>x*math.PI/180)(math.numeric(inputs.x)) })"
+}

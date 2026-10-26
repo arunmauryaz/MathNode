@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "whole-square-source",
+  "title": "Whole Square Source",
+  "pan": {
+    "x": 0,
+    "y": 0
+  },
+  "zoom": 0.8,
+  "nodes": [
+    {
+      "id": "node-demo-val1",
+      "definitionId": "math.value",
+      "type": "math.value",
+      "title": "A",
+      "x": -600,
+      "y": -180,
+      "width": 260,
+      "height": 186,
+      "values": {
+        "value": 2
+      },
+      "computedOutputs": {
+        "value": 25
+      }
+    },
+    {
+      "id": "node-demo-val2",
+      "definitionId": "math.value",
+      "type": "math.value",
+      "title": "B",
+      "x": -600,
+      "y": 100,
+      "width": 260,
+      "height": 186,
+      "values": {
+        "value": 3
+      },
+      "computedOutputs": {
+        "value": 17
+      }
+    },
+    {
+      "id": "node-demo-op",
+      "definitionId": "math.operations",
+      "type": "math.operations",
+      "title": "Math Operation",
+      "x": -200,
+      "y": -180,
+      "width": 250,
+      "height": 238,
+      "values": {
+        "a": 25,
+        "b": 17,
+        "operation": "Add (+)"
+      },
+      "computedOutputs": {
+        "result": 42
+      }
+    },
+    {
+      "id": "node-demo-output",
+      "definitionId": "math.output",
+      "type": "math.output",
+      "title": "Result",
+      "x": 600,
+      "y": -80,
+      "width": 240,
+      "height": 168,
+      "values": {
+        "input": 42
+      },
+      "computedOutputs": {
+        "output": 42
+      }
+    },
+    {
+      "id": "square-function",
+      "type": "math.function",
+      "definitionId": "math.function",
+      "title": "Square",
+      "x": 200,
+      "y": -140,
+      "values": {
+        "x": 0,
+        "func": "x^2"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn-1",
+      "fromNodeId": "node-demo-val1",
+      "fromSocket": "value",
+      "toNodeId": "node-demo-op",
+      "toSocket": "a",
+      "color": "#60A5FA"
+    },
+    {
+      "id": "conn-2",
+      "fromNodeId": "node-demo-val2",
+      "fromSocket": "value",
+      "toNodeId": "node-demo-op",
+      "toSocket": "b",
+      "color": "#60A5FA"
+    },
+    {
+      "id": "sum-to-square",
+      "fromNodeId": "node-demo-op",
+      "fromSocket": "result",
+      "toNodeId": "square-function",
+      "toSocket": "x",
+      "color": "#8B9BB4"
+    },
+    {
+      "id": "square-to-result",
+      "fromNodeId": "square-function",
+      "fromSocket": "result",
+      "toNodeId": "node-demo-output",
+      "toSocket": "input",
+      "color": "#8B9BB4"
+    }
+  ],
+  "frames": []
+}

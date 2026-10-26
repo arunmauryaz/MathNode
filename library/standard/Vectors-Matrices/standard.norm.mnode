@@ -1,0 +1,26 @@
+{
+  "id": "standard.norm",
+  "name": "Vector Length",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Vector Length. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "v",
+      "type": "vector",
+      "default": [
+        3,
+        4
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.norm(inputs.v) })"
+}

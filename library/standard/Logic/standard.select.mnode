@@ -1,0 +1,36 @@
+{
+  "id": "standard.select",
+  "name": "Select Value",
+  "folderId": "standard-5",
+  "category": "Logic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Select Value. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "condition",
+      "type": "bool",
+      "default": true,
+      "widget": "toggle"
+    },
+    {
+      "name": "whenTrue",
+      "type": "scalar",
+      "default": 1,
+      "widget": "number"
+    },
+    {
+      "name": "whenFalse",
+      "type": "scalar",
+      "default": 0,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: inputs.condition ? inputs.whenTrue : inputs.whenFalse })"
+}

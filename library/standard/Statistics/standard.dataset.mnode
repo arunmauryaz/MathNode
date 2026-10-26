@@ -1,0 +1,25 @@
+{
+  "id": "standard.dataset",
+  "name": "Numeric Dataset",
+  "folderId": "standard-3",
+  "category": "Statistics",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Numeric Dataset. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "numbers",
+      "type": "string",
+      "default": "1, 2, 3, 4",
+      "widget": "text",
+      "connectable": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "vector"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.dataset(inputs.numbers) })"
+}

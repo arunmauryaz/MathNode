@@ -1,0 +1,22 @@
+{
+  "id": "math.base.all_in_one",
+  "name": "All In One Operator",
+  "category": "Mathematical Expression / Base",
+  "badge": "EXPR",
+  "description": "Multi-mode arithmetic operator with selectable operation",
+  "inputs": [
+    { "name": "A", "type": "scalar", "default": 0, "widget": "number" },
+    { "name": "B", "type": "scalar", "default": 1, "widget": "number" },
+    { 
+      "name": "Op", 
+      "type": "string", 
+      "default": "Add", 
+      "widget": "dropdown", 
+      "options": ["Add", "Subtract", "Multiply", "Divide", "Power", "Modulo"] 
+    }
+  ],
+  "outputs": [
+    { "name": "Result", "type": "scalar" }
+  ],
+  "code": "switch(inputs.Op) { case 'Add': return { Result: inputs.A + inputs.B }; case 'Subtract': return { Result: inputs.A - inputs.B }; case 'Multiply': return { Result: inputs.A * inputs.B }; case 'Divide': return { Result: inputs.B !== 0 ? inputs.A / inputs.B : NaN }; case 'Power': return { Result: Math.pow(inputs.A, inputs.B) }; case 'Modulo': return { Result: inputs.A % inputs.B }; default: return { Result: inputs.A + inputs.B }; }"
+}

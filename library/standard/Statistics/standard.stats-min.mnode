@@ -1,0 +1,28 @@
+{
+  "id": "standard.stats-min",
+  "name": "Dataset Minimum",
+  "folderId": "standard-3",
+  "category": "Statistics",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Dataset Minimum. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "data",
+      "type": "vector",
+      "default": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.stats(inputs.data,'min') })"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "mathnode",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:ui": "playwright test tests/workflow.spec.ts",
+    "sdk": "node scripts/node-sdk.mjs",
+    "library:export": "node scripts/node-sdk.mjs export-standard",
+    "library:test": "node scripts/node-sdk.mjs test-standard",
+    "mcp": "node scripts/mcp-server.mjs",
+    "test:mcp": "playwright test tests/mcp.spec.ts"
+  },
+  "dependencies": {
+    "@cortex-js/compute-engine": "^0.169.1",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@types/jszip": "^3.4.0",
+    "clsx": "^2.1.1",
+    "esbuild": "^0.25.12",
+    "jszip": "^3.10.2",
+    "katex": "^0.19.1",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/katex": "^0.16.8",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=22.3.0",
+    "npm": ">=10.5.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "standard.inverse",
+  "name": "Matrix Inverse",
+  "folderId": "standard-4",
+  "category": "Vectors & Matrices",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Matrix Inverse. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "matrix",
+      "type": "matrix",
+      "default": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "widget": "matrix2x2"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "matrix"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.inverse(inputs.matrix) })"
+}

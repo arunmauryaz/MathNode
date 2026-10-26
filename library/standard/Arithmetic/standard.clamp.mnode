@@ -1,0 +1,36 @@
+{
+  "id": "standard.clamp",
+  "name": "Clamp",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Clamp. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "scalar",
+      "default": 5,
+      "widget": "number"
+    },
+    {
+      "name": "min",
+      "type": "scalar",
+      "default": 0,
+      "widget": "number"
+    },
+    {
+      "name": "max",
+      "type": "scalar",
+      "default": 1,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: (()=>{const lo=math.numeric(inputs.min),hi=math.numeric(inputs.max);if(lo>hi)throw Error('Minimum exceeds maximum');return math.min(hi,math.max(lo,math.numeric(inputs.x)));})() })"
+}

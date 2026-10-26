@@ -1,0 +1,24 @@
+{
+  "id": "standard.simplify",
+  "name": "Simplify",
+  "folderId": "standard-2",
+  "category": "Algebra & Calculus",
+  "badge": "FORMULA",
+  "icon": "function",
+  "description": "Simplify. Accepts symbolic formulas and LaTeX.",
+  "inputs": [
+    {
+      "name": "expression",
+      "type": "scalar",
+      "default": "(A+B)^2",
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.transform(inputs.expression,'Simplify') })"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "standard.gcd",
+  "name": "Greatest Common Divisor",
+  "folderId": "standard-0",
+  "category": "Arithmetic",
+  "badge": "MATH",
+  "icon": "function",
+  "description": "Greatest Common Divisor. Angles use radians; numeric collection operations require assigned values.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "scalar",
+      "default": 12,
+      "widget": "number"
+    },
+    {
+      "name": "b",
+      "type": "scalar",
+      "default": 18,
+      "widget": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar"
+    }
+  ],
+  "code": "(inputs, math) => ({ result: math.collections.gcd(math.numeric(inputs.a),math.numeric(inputs.b)) })"
+}

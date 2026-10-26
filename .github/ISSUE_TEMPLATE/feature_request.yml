@@ -1,0 +1,14 @@
+name: Feature idea
+description: Suggest a mathematical node, workflow, or interaction.
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to do?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: A formula, sketch, or small graph helps explain the idea.

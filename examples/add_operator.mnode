@@ -1,0 +1,15 @@
+{
+  "id": "math.base.add",
+  "name": "Add",
+  "category": "Mathematical Expression / Base",
+  "badge": "FLOAT64",
+  "description": "Calculates the sum of two inputs A and B",
+  "inputs": [
+    { "name": "A", "type": "scalar", "default": 0, "widget": "number" },
+    { "name": "B", "type": "scalar", "default": 0, "widget": "number" }
+  ],
+  "outputs": [
+    { "name": "Sum", "type": "scalar" }
+  ],
+  "code": "return { Sum: inputs.A + inputs.B };"
+}
