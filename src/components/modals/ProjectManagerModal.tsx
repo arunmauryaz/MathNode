@@ -95,9 +95,11 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
         {/* Titlebar (Height: 48px) */}
         <div className="mathnode-modal-header shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-[24px] h-[24px] rounded-[6px] bg-[#2563EB] border border-[#60A5FA] flex items-center justify-center text-white font-bold text-[13px] shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
-              M
-            </div>
+            <img
+              src="/favicon.png"
+              alt="MathNode"
+              className="w-[30px] h-[32px] shrink-0"
+            />
             <span className="text-[13px] font-semibold text-[#EDEDED] font-sans">
               Projects
             </span>

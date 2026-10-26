@@ -1,5 +1,8 @@
 # Math Node — Complete UI Design System & Style Specification
 
+**Official branding:** Use the existing blue, raised **M** logo and **MATH NODE** wordmark. See [the official assets](docs/BRANDING.md). Keep the original mark; do not substitute a new monogram or graph-shaped logo.
+
+
 > **Target Audience / AI Agent Prompt Instruction:**  
 > Read this design document before writing, generating, or modifying any frontend code, UI components, HTML/CSS, WebGL/Canvas renderers, or design files for **Math Node**.  
 > **Aesthetic Core:** Calm, tactile engineering instrument precision (inspired by ComfyUI, Blender Shader/Geometry Nodes, and physical electronic hardware keycaps). **Zero neon slop, zero AI cyberpunk glow, zero gratuitous animation.**

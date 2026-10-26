@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/banner.svg" alt="MathNode — Make the math visible" width="100%" />
+  <img src="docs/assets/banner.png" alt="MathNode — Make the math visible" width="100%" />
 </p>
 
 <p align="center">
@@ -73,6 +73,6 @@ An MCP agent can create graphs, connect nodes, execute calculations, inspect err
 | **Try a formula** | [LaTeX workspace](examples/latex_formula.mathnode) · [Symbolic whole square](examples/symbolic_whole_square.mnode) |
 | **Get the library** | [93 portable nodes](library/standard) · [Download ZIP](library/MathNode-Standard.zip) |
 | **Make your own** | [Node SDK & format](docs/NODE_AUTHORING.md) |
-| **Go deeper** | [Project reference](docs/REFERENCE.md) · [Design guide](mathnode-design-guide.md) |
+| **Go deeper** | [Project reference](docs/REFERENCE.md) · [Design guide](mathnode-design-guide.md) · [Brand assets](docs/BRANDING.md) |
 
 <sub>Mathematical DAGs with real-number evaluation and symbolic formulas. Equation nodes represent equalities; they are not a universal solver. Run only trusted custom kernels. This project is under active development.</sub>
